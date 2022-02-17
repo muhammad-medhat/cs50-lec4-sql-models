@@ -1,0 +1,12 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h1>Listing {{listing.title}}</h1>
+    <h2>Watch List</h2>
+    
+    
+    {%for wl in watch_list%}
+    <li>{{wl}}</li>
+    {% endfor %}
+    {{request.user}}
+{% endblock %}
