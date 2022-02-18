@@ -15,7 +15,7 @@ class Auction_Listing(models.Model):
     price = models.FloatField()
     img_url = models.CharField(max_length=256)
     description = models.CharField(max_length=1024, default='')
-    user  = models.ForeignKey(User, on_delete=models.CASCADE, related_name='users',  default=1)
+    user  = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='users',  default=1)
     starting_bid = models.DecimalField(
         decimal_places=2, max_digits=4, default=1.0)
 
